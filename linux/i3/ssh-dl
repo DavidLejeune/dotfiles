@@ -1,0 +1,187 @@
+#!/usr/bin/env bash
+# Connect via ssh to a machine SSH connections will be easier if ssh keys are generated see wiki 
+for ssh
+# keygen : https://qbmtbe.atlassian.net/wiki/display/KB/Generating+SSH+keys+in+Linux
+Menu="DO THAT SSH MAGIC"
+Menu1="Billy-Billy Beta"
+Menu2="Bamboo Server"
+Menu3="Billy-Billy"
+Menu4="Billy-Billy Beta server"
+Menu5="Ubuntu in Virtualbox"
+Menu6="Postgres for Bamboo"
+Menu7="remote-agent-1"
+Menu8="remote-agent-2"
+Menu9="remote-agent-3"
+Menu10="remote-agent-4"
+Menu11="remote-agent-5"
+Menu12="Billy Dev pot"
+Menu13="Code-Review server"
+Menu14="DL prototype"
+Menu15="BAD RPi TD"
+Menu16="BAD RPi CM"
+Menu17="BAD RPi WV"
+Menu18="Release Candidate"
+Menu19="Windows Server 2012"
+Menu20="Archiva Repo Manager"
+Menu21="Test Pot DL"
+Menu22="SSH Tunnel"
+Menu23="Ubuntu Standalone"
+
+
+
+Menu666="Quit"
+function show_header(){
+        #feed the narcistic beast
+        #./tools/lib/show_header
+        #(clear && toilet -f slant -F gay DaLe && toilet -f digital -F gay  Linux CLI && echo 
+"$(date '+%D %T' | toilet -f term -F border --gay)"&& fortune )
+        (clear && (figlet " DaLe" | toilet -f term --gay) && toilet -f term "      Linux CLI " 
+--gay && echo "      $(date '+%D %T' | toilet -f term --gay )" && echo "")
+        echo ' >> Author : David Lejeune'
+        echo ' >> Created : 19/07/2017'
+        echo ''
+        echo ' #####################################'
+        echo " $Menu "
+        echo ' #####################################'
+        echo ''
+}
+function show_menu(){
+        echo -e " 1. $Menu1""\t\t 11. $Menu11"
+        echo -e " 2. $Menu2""\t\t 12. $Menu12"
+  echo -e " 3. $Menu3""\t\t\t 13. $Menu13"
+        echo -e " 4. $Menu4""\t 14. $Menu14"
+        echo -e " 5. $Menu5""\t 15. $Menu15"
+        echo -e " 6. $Menu6""\t\t 16. $Menu16"
+  echo -e " 7. $Menu7""\t\t 17. $Menu17"
+  echo -e " 8. $Menu8""\t\t 18. $Menu18"
+  echo -e " 9. $Menu9""\t\t 19. $Menu19"
+  echo -e " 10. $Menu10""\t\t 20. $Menu20"
+        echo -e ""
+        echo -e " 21. $Menu21"
+        echo -e " 22. $Menu22"
+        echo -e " 23. $Menu23"
+  # echo -e " 11. $Menu11"
+        # echo -e " 12. $Menu12"
+        # echo -e " 13. $Menu13"
+  # echo -e " 14. $Menu14"
+  # echo -e " 15. $Menu15"
+  # echo -e " 16. $Menu16"
+  # echo -e " 17. $Menu17"
+  # echo -e " 18. $Menu18"
+  # echo -e " 19. $Menu19"
+  # echo -e " 20. $Menu20"
+
+        echo " "
+        echo " 666. $Menu666"
+        echo ''
+}
+
+#intro
+show_header
+show_menu
+
+#do your thing based on menu choice
+printf 'Make your choice : '
+read -r choice
+show_header
+if [ $choice == 1 ] ; then
+        Menu=$Menu1
+        show_header
+        ssh qbmtadmin@192.168.0.21
+elif [ $choice == 2 ] ; then
+        Menu=$Menu2
+        show_header
+        ssh qbmtadmin@192.168.0.22
+elif [ $choice == 3 ] ; then
+        Menu=$Menu3
+        show_header
+        ssh pi@192.168.0.92
+elif [ $choice == 4 ] ; then
+        Menu=$Menu4
+        show_header
+        ssh qbmtadmin@192.168.0.21
+elif [ $choice == 5 ] ; then
+        Menu=$Menu5
+        show_header
+        ssh lucian@192.168.56.101
+elif [ $choice == 6 ] ; then
+        Menu=$Menu6
+        show_header
+        ssh qbmtadmin@192.168.0.24
+elif [ $choice == 7 ] ; then
+        Menu=$Menu7
+        show_header
+        ssh agent@192.168.0.93
+elif [ $choice == 8 ] ; then
+        Menu=$Menu8
+        show_header
+        ssh agent@192.168.0.94
+elif [ $choice == 9 ] ; then
+        Menu=$Menu9
+        show_header
+        ssh agent@192.168.0.95
+elif [ $choice == 10 ] ; then
+        Menu=$Menu10
+        show_header
+        ssh agent@192.168.0.96
+elif [ $choice == 11 ] ; then
+        Menu=$Menu11
+        show_header
+        ssh agent@192.168.0.97
+elif [ $choice == 12 ] ; then
+        Menu=$Menu12
+        show_header
+        ssh pi@192.168.1.201
+elif [ $choice == 13 ] ; then
+        Menu=$Menu13
+        show_header
+        ssh qbmtadmin@192.168.0.99
+elif [ $choice == 14 ] ; then
+        Menu=$Menu14
+        show_header
+        ssh pi@192.168.0.86
+elif [ $choice == 15 ] ; then
+        Menu=$Menu15
+        show_header
+        ssh pi@192.168.0.82
+elif [ $choice == 16 ] ; then
+        Menu=$Menu16
+        show_header
+        ssh pi@192.168.0.83
+elif [ $choice == 17 ] ; then
+        Menu=$Menu17
+        show_header
+        ssh pi@192.168.0.84
+elif [ $choice == 18 ] ; then
+        Menu=$Menu18
+        show_header
+        ssh pi@192.168.1.205
+elif [ $choice == 19 ] ; then
+        Menu=$Menu19
+        show_header
+        ssh pi@192.168.0.120
+elif [ $choice == 20 ] ; then
+        Menu=$Menu20
+        show_header
+        ssh qbmtadmin@192.168.0.174
+elif [ $choice == 21 ] ; then
+        Menu=$Menu21
+        show_header
+        ssh pi@192.168.0.210
+elif [ $choice == 22 ] ; then
+        Menu=$Menu22
+        show_header
+        ssh qbmtguest@billybot.be
+elif [ $choice == 23 ] ; then
+        Menu=$Menu23
+        show_header
+        ssh ubuntu@192.168.0.233
+
+elif [ $choice == 666 ] ; then
+        Menu=$Menu666
+        show_header
+        echo "Thank you , please come again ..."
+else
+        echo "You haven't made a valid choice"
+fi
+

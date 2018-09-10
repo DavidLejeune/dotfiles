@@ -1,0 +1,6 @@
+su
+systemctl enable vboxservice
+systemctl start vboxservice
+groupadd vboxsf
+gpasswd -a $USER vboxsf
+exit
